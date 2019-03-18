@@ -14,7 +14,7 @@
 }
 
 .wrapper {
-  margin: auto;
+  margin: 2rem auto;
   height: auto;
   padding: 2rem;
   width: 75%;
@@ -32,6 +32,10 @@
 
 #myList {
   font-size: 2rem;
+}
+
+.button-wrapper {
+  margin: 1rem;
 }
 
 #div-one {

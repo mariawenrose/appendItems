@@ -2,6 +2,11 @@
 // APPEND LIST
 //-------------------------------------
 
+document.getElementById('append-list-button').addEventListener('click',function(){
+  createListItem();
+})
+
+
 //creates list items - generates one list item
 function createListItem (text) {
   var li = document.createElement('li');
@@ -39,13 +44,6 @@ items.forEach(function(li) {
 // APPEND DIVS
 //-------------------------------------
 
-
-// var element = document.createElement('div');
-
-  // element.style.cssText = "width: 12em; height: 12em; background: #c8a2c8;";
-    // element.onclick = function() {alert('wowee u clicked da div');};
-      // document.getElementById('appendDivs').appendChild(element);
-
 // creating a varible, telling the dom what we want it to be
 var element = document.createElement('div');
     element.style.cssText = "width: 12em; height: 12em; background: #c8a2c8;";
@@ -55,8 +53,12 @@ var element = document.createElement('div');
 // telling it grab the node (div-two)
 var target = document.getElementById('div-two');
 
-// targeting the parent div and telling to insert above 
+// targeting the parent node (div) 
+// telling it we want the object that we named (var element)
+//and telling to insert before our target (var div-two)
 document.getElementById('appendDivs').insertBefore(element, target);
+// document.getElementById('appendDivs').appendChild(element);
+
   
 
 
