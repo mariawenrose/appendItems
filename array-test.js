@@ -1,4 +1,6 @@
-
+//-------------------------------------
+// APPEND LIST
+//-------------------------------------
 
 //creates list items - generates one list item
 function createListItem (text) {
@@ -8,21 +10,15 @@ function createListItem (text) {
 }
 // function with the arguments takes a parent and array of children, and for each child
 //in that array it's gonna append that child to the parent element 
-function appendChildren (parent, children) {
-  children.forEach(function (child){
-    parent.appendChild(child)
-  });
-}
-
-// items.forEach(function(li) {
-//   myList.appendChild(li);
-// }); 
-
-
+// function appendChildren (parent, children) {
+//   children.forEach(function (child){
+//     parent.appendChild(child)
+//   });
+// }
 
 //we define the parent and child elements
 var myList = document.getElementById('myList');
-console.log(myList);
+// console.log(myList);
 
 var items = [
   createListItem('dom'),
@@ -31,7 +27,48 @@ var items = [
 
 ];
 
-appendChildren(myList,items);
+items.forEach(function(li) {
+  myList.appendChild(li);
+}); 
+
+//linked to first function
+// appendChildren(myList,items);
+
+
+//-------------------------------------
+// APPEND DIVS
+//-------------------------------------
+
+
+var element = document.createElement('div');
+
+  element.style.cssText = "width:600px; height:600px; background:blue;";
+
+  // element.onclick = function() {alert('wowee u clicked da div');};
+
+  document.getElementById('appendDivs').appendChild(element);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
