@@ -40,17 +40,24 @@ items.forEach(function(li) {
 //-------------------------------------
 
 
+// var element = document.createElement('div');
+
+  // element.style.cssText = "width: 12em; height: 12em; background: #c8a2c8;";
+    // element.onclick = function() {alert('wowee u clicked da div');};
+      // document.getElementById('appendDivs').appendChild(element);
+
+// creating a varible, telling the dom what we want it to be
 var element = document.createElement('div');
+    element.style.cssText = "width: 12em; height: 12em; background: #c8a2c8;";
 
-  element.style.cssText = "width:600px; height:600px; background:blue;";
+    element.onclick = (function(){alert ('u clickd da div');});
 
-  // element.onclick = function() {alert('wowee u clicked da div');};
+// telling it grab the node (div-two)
+var target = document.getElementById('div-two');
 
-  document.getElementById('appendDivs').appendChild(element);
-
-
-
-
+// targeting the parent div and telling to insert above 
+document.getElementById('appendDivs').insertBefore(element, target);
+  
 
 
 
